@@ -4,7 +4,7 @@ if (!function_exists('relative_time')) {
 
     function relative_time($time) {
 
-        $time = strtotime($time);
+        $time = (is_string($time) ? strtotime($time) : $time);
         $timeSince = time() - $time;
 
         $tokens = array (
