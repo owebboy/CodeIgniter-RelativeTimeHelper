@@ -8,19 +8,22 @@ if (!function_exists('relative_time')) {
         $timeSince = time() - $time;
 
         $tokens = array (
-            31536000 => 'year',
-            2592000 => 'month',
-            604800 => 'week',
-            86400 => 'day',
-            3600 => 'hour',
-            60 => 'minute',
-            1 => 'second'
+            31536000 => array('jaar','jaren'),
+            2592000 =>  array('maand','maanden'),
+            604800 =>   array('week','weken'),
+            86400 =>    array('dag','dagen'),
+            3600 =>     array('uur','uur'),
+            60 =>       array('minuut','minuten'),
+            1 =>        array('seconde','seconden')
         );
 
-        foreach ($tokens as $unit => $text) {
+        foreach ($tokens as $unit => $label) {
             if ($timeSince < $unit) continue;
-            $numberOfUnits = floor($timeSince / $unit);
-            return $numberOfUnits . ' ' . $text . (($numberOfUnits > 1) ? 's' : '');
+
+            $numberOfUnits  = floor($timeSince / $unit);
+            $key            = ($numberOfUnits > 1) ? 1 : 0;
+            
+            return $numberOfUnits . ' ' . $label[ $key ];
         }
 
     }

@@ -1,4 +1,4 @@
-# CodeIgniter - Relative Time Helper
+# CodeIgniter - Relative Time Helper (NL)
 
 Converts dates into a relative time e.g. __2 months__
 
@@ -15,3 +15,6 @@ A value from the PHP `time()` function e.g. `1333494410`
 
 Adapted from - http://stackoverflow.com/a/2916189/617615
 
+## Fork
+
+This fork contains a Dutch adaptation of the relative time format, since's it a bit trickier grammar-wise.
