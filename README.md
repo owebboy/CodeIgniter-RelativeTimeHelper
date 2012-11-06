@@ -1,6 +1,6 @@
 # CodeIgniter - Relative Time Helper (NL)
 
-Converts dates into a relative time e.g. __2 months__
+Converts dates into a relative time e.g. __2 maanden__
 
 ## Usage
 
