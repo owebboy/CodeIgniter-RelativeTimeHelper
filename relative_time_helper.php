@@ -8,13 +8,13 @@ if (!function_exists('relative_time')) {
         $timeSince = time() - $time;
 
         $tokens = array (
-            31536000 => array('jaar','jaren'),
-            2592000 =>  array('maand','maanden'),
-            604800 =>   array('week','weken'),
-            86400 =>    array('dag','dagen'),
-            3600 =>     array('uur','uur'),
-            60 =>       array('minuut','minuten'),
-            1 =>        array('seconde','seconden')
+            31536000 => array('year','years'),
+            2592000 =>  array('month','months'),
+            604800 =>   array('week','weeks'),
+            86400 =>    array('day','days'),
+            3600 =>     array('hour','hours'),
+            60 =>       array('minute','minutes'),
+            1 =>        array('second','seconds')
         );
 
         foreach ($tokens as $unit => $label) {
